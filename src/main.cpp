@@ -1136,8 +1136,8 @@ unsigned int GetNextTargetRequired(const CBlockIndex* pindexLast, bool fProofOfS
     if (pindexPrevPrev->pprev == NULL)
         return bnTargetLimit.GetCompact(); // second block
 
-	int64 nActualSpacing = pindexPrev->GetBlockTime() - pindexPrevPrev->GetBlockTime();
-	int64 nCheckTime=GetTime();
+	int nActualSpacing = pindexPrev->GetBlockTime() - pindexPrevPrev->GetBlockTime();
+	int nCheckTime=GetTime();
      if(nCheckTime > 1437789600) //Human time (GMT): Sat, 25 July 2015 02:00:00 GMT
      {
          int nHeight = pindexPrev->nHeight+1;
